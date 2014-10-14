@@ -1,15 +1,44 @@
+//----------------------------------------------------
 //
-//  main.c
-//  C_Programming_UMass
+// HOMEWORK: fill in the assignment number
 //
-//  Created by Yehuda Miller on 14/10/14.
-//  Copyright (c) 2014 Yehuda Miller. All rights reserved.
+// Name: Joshua Miller
 //
+// Class: C Programming
+//
+// Date:
+//
+// Description: short description of the program
+//
+//----------------------------------------------------
 
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+int main(void) {
+    //-*-*-*-*-Variable Declarations-*-*-*-*-
+    
+    
+    
+    //-*-*-*-*-Begin creating the nuts and bolts-*-*-*-*-
+    
+    
+    
+    
     return 0;
 }
+
+// *******************************************************************
+// Function Calc_Gross_Pay
+//
+// Purpose: This function will calculate the gross pay for five
+// employees. It will add to the gross pay any overtime
+// pay if necessary.
+//
+// Parameters: wage - rate of pay for the employee
+//             hours - # of hours the employee worked
+//             ot_pay - overtime pay for the employee
+//
+// Returns: gross pay (including any overtime pay) for the employee
+//
+// *******************************************************************
+
