@@ -86,6 +86,7 @@
 		0FEF2D1119ECE4530064CEDA /* Program9.6.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF2CC319ECE4530064CEDA /* Program9.6.c */; };
 		0FEF2D1219ECE4530064CEDA /* Program9.7.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF2CC419ECE4530064CEDA /* Program9.7.c */; };
 		0FEF2D1F19ECE9FC0064CEDA /* Program10.1.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF2D1D19ECE9FC0064CEDA /* Program10.1.c */; };
+		0FEF2D2119ED80120064CEDA /* Program10.2.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF2D2019ED80120064CEDA /* Program10.2.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -181,7 +182,7 @@
 		0FEF2CC319ECE4530064CEDA /* Program9.6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program9.6.c; sourceTree = "<group>"; };
 		0FEF2CC419ECE4530064CEDA /* Program9.7.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program9.7.c; sourceTree = "<group>"; };
 		0FEF2D1D19ECE9FC0064CEDA /* Program10.1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program10.1.c; sourceTree = "<group>"; };
-		0FEF2D1E19ECE9FC0064CEDA /* TemplateIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon2x.png; sourceTree = "<group>"; };
+		0FEF2D2019ED80120064CEDA /* Program10.2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program10.2.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,7 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				0FEF2D1D19ECE9FC0064CEDA /* Program10.1.c */,
-				0FEF2D1E19ECE9FC0064CEDA /* TemplateIcon2x.png */,
+				0FEF2D2019ED80120064CEDA /* Program10.2.c */,
 			);
 			name = "Chapter 10";
 			sourceTree = "<group>";
@@ -489,6 +490,7 @@
 				0FEF2D0F19ECE4530064CEDA /* Program9.4.c in Sources */,
 				0FEF2CD019ECE4530064CEDA /* CoolStuff.c in Sources */,
 				0FEF2D0919ECE4530064CEDA /* Program8.14.c in Sources */,
+				0FEF2D2119ED80120064CEDA /* Program10.2.c in Sources */,
 				0FEF2CF519ECE4530064CEDA /* Program7.1.c in Sources */,
 				0FEF2CED19ECE4530064CEDA /* Program6.5.c in Sources */,
 				0FEF2D0819ECE4530064CEDA /* Program8.13A.c in Sources */,
