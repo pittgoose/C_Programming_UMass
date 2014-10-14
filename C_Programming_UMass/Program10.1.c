@@ -28,5 +28,11 @@ int main (void)
     char s3[11];
     int i;
     
+    concat(s3, s1, 5, s2, 6);
     
+    for (i = 0; i < 11; ++i) {
+        printf("%c", s3[i]);
+    }
+    
+    printf("\n");
 }
