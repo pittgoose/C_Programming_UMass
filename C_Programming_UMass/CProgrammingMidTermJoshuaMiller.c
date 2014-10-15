@@ -363,7 +363,47 @@ float array_min (float array[], int size)
     return min;
 }
 
+// *******************************************************************
+// 7. Write a function that raises an integer to a positive integer power.
+// Call the function x_to_the_n, taking two integer arguments x and n.
+// Have the function return a long int, which represents the results of
+// calculating x to the nth power.   Do not use the C pow library function.
+//
+// Example:  if x = 3 and n = 2, the function would return 9.
+//
+// NOTE:  Do not use recursion (since that version is in your lecture notes).
+// *******************************************************************
 
+// *******************************************************************
+// Function x_to_the_n
+//
+// Purpose: This function will accept two integers and raise the first
+//          to the power of the second.
+//
+// Parameters: x - an integer to be raised
+//             n - the exponent to raise it by
+//
+// Returns: the result of x to the nth power in a lont int format
+//
+// *******************************************************************
+long int x_to_the_n (int x, int n)
+{
+    long int result = x; //initialize a result and set it to the first power of x
+    int i;
+    
+    // Handle the Zeroth power. Any number to the power of 0 is equal to 1
+    if (n == 0) {
+        return 1;
+    }
+    
+    // If n is greater than 1, multiply result by x and store the answer back into result until you reach n
+    for (i = 1; i < n; ++i) {
+        result *= x;
+    }
+    
+    // return the result
+    return result;
+}
 
 
 

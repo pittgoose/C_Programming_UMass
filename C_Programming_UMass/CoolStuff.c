@@ -24,7 +24,7 @@
  
 
 
-
+#include <stdio.h>
 
 
 // *******************************************************************
@@ -38,8 +38,46 @@
 // NOTE:  Do not use recursion (since that version is in your lecture notes).
 // *******************************************************************
 
+// *******************************************************************
+// Function x_to_the_n
+//
+// Purpose: This function will accept two integers and raise the first
+//          to the power of the second.
+//
+// Parameters: x - an integer to be raised
+//             n - the exponent to raise it by
+//
+// Returns: the result of x to the nth power in a lont int format
+//
+// *******************************************************************
+long int x_to_the_n (int x, int n)
+{
+    long int result = x; //initialize a result and set it to the first power of x
+    int i;
+    
+    // Handle the Zeroth power. Any number to the power of 0 is equal to 1
+    if (n == 0) {
+        return 1;
+    }
+    
+    // If n is greater than 1, multiply result by x and store the answer back into result until you reach n
+    for (i = 1; i < n; ++i) {
+        result *= x;
+    }
+    
+    // return the result
+    return result;
+}
 
-
+int main (void)
+{
+    int x = 9;
+    int n = 0;
+    long int x_to_the_n (int x, int n);
+    
+    printf("%li\n", x_to_the_n(x, n));
+    return 0;
+}
 
 
 
