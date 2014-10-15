@@ -11,6 +11,7 @@
 		0FB56CCB19EE5CA1009A7981 /* Program10.4.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FB56CCA19EE5CA1009A7981 /* Program10.4.c */; };
 		0FB56CCD19EE629D009A7981 /* Program10.5.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FB56CCC19EE629D009A7981 /* Program10.5.c */; };
 		0FB56CCF19EE649A009A7981 /* Program10.6.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FB56CCE19EE649A009A7981 /* Program10.6.c */; };
+		0FB56CD119EE74B0009A7981 /* Program10.7.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FB56CD019EE74B0009A7981 /* Program10.7.c */; };
 		0FEF2CC519ECE4530064CEDA /* Chapter3Exercise2.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF2C7719ECE4530064CEDA /* Chapter3Exercise2.c */; };
 		0FEF2CC619ECE4530064CEDA /* Chapter3Exercise4.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF2C7819ECE4530064CEDA /* Chapter3Exercise4.c */; };
 		0FEF2CC719ECE4530064CEDA /* Chapter3Exercise6.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF2C7919ECE4530064CEDA /* Chapter3Exercise6.c */; };
@@ -111,6 +112,7 @@
 		0FB56CCA19EE5CA1009A7981 /* Program10.4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program10.4.c; sourceTree = "<group>"; };
 		0FB56CCC19EE629D009A7981 /* Program10.5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program10.5.c; sourceTree = "<group>"; };
 		0FB56CCE19EE649A009A7981 /* Program10.6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program10.6.c; sourceTree = "<group>"; };
+		0FB56CD019EE74B0009A7981 /* Program10.7.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program10.7.c; sourceTree = "<group>"; };
 		0FEF2C7719ECE4530064CEDA /* Chapter3Exercise2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Chapter3Exercise2.c; sourceTree = "<group>"; };
 		0FEF2C7819ECE4530064CEDA /* Chapter3Exercise4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Chapter3Exercise4.c; sourceTree = "<group>"; };
 		0FEF2C7919ECE4530064CEDA /* Chapter3Exercise6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Chapter3Exercise6.c; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				0FB56CCA19EE5CA1009A7981 /* Program10.4.c */,
 				0FB56CCC19EE629D009A7981 /* Program10.5.c */,
 				0FB56CCE19EE649A009A7981 /* Program10.6.c */,
+				0FB56CD019EE74B0009A7981 /* Program10.7.c */,
 			);
 			name = "Chapter 10";
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				0FEF2CD819ECE4530064CEDA /* Program3.3.c in Sources */,
 				0FB56CCD19EE629D009A7981 /* Program10.5.c in Sources */,
 				0FEF2D0D19ECE4530064CEDA /* Program9.2.c in Sources */,
+				0FB56CD119EE74B0009A7981 /* Program10.7.c in Sources */,
 				0FEF2CDE19ECE4530064CEDA /* Program4.3.c in Sources */,
 				0FEF2CF819ECE4530064CEDA /* Program7.4.c in Sources */,
 				0FEF2CDF19ECE4530064CEDA /* Program4.4.c in Sources */,
