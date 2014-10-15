@@ -91,13 +91,45 @@ int frequency (int theArray [ ], int n, int x){
     return occurences; // Return the number of occurrences to the calling function
 }
 
+// *******************************************************************
+// 3a) The mathematical operation max(x,y,w,z) can be represented by using the conditional
+// expression operator, as in:
+//
+// max = (x > y && x > z && x > w) ? x : ((y > z && y > w) ? y : ((z > w) ? z : w));
+//
+// Write a corresponding if else statement that is equivalent to the statement above
+// that will set max to the largest value of x, y, w, or z.
+// *******************************************************************
 
+if (x > y && x > z && x > w) {
+    max = x;
+}
+else {
+    if (y > z && y > w) {
+        max = y;
+    }
+    else {
+        if (z > w) {
+            max = z;
+        }
+        else {
+            max = w;
+        }
+    }
+}
 
-// *&*&*&*&*&*&*&*&*
-// Number 3 here!!!!
-// *&*&*&*&*&*&*&*&*
+// *******************************************************************
+// 3b) Conversely, use a conditional expression operator to rewrite the statement below:
+//
+// if (x > 0)
+// sign = 1;
+// else if (x == 0)
+// sign = 0;
+// else
+// sign = -1;
+// *******************************************************************
 
-
+sign = (x > 0) ? 1 : ((x == 0) ? 0 : -1);
 
 // *******************************************************************
 // 4.  Given the following test scores and grade equivalents, write a function
@@ -328,7 +360,7 @@ float array_avg (float array[], int size)
     float avg = 0.0; // Stores the average of all the numbers
     
     // Averages the numbers by calling the array_sum function and then dividing by size
-    avg = array_sum(array, size) / size;
+    avg = array_sum(array, size) / size; // Tim, you have me thinking like a programmer!
     
     // Return the average
     return avg;
@@ -405,17 +437,83 @@ long int x_to_the_n (int x, int n)
     return result;
 }
 
+// *******************************************************************
+// 8. The Federation has asked you to develop a program to keep track of its
+// officers.  A sample of the kind of information for each officer is
+// shown below.
+//
+// Name: Mr. James Tiberius Kirk
+// Date of Birth:  March 22, 2233
+// Address:  23 Falling Rock,
+// Riverside, Iowa 52327-0021
+// Planet Earth
+// Rank: Captain
+// Ship: USS Enterprise
+// Nickname: Jim
+// Favorite Saying: "Bones???"
+// Starting Stardate: 41153.7
+// Martial Status:  Single
+// Starfleet Graduation Date:  June 23, 2212
+//
+// Name: Mr. Leonard A. McCoy Jr.
+// Date of Birth:  7/8/2227
+// Address:  8745 South Road
+// Jackson, Mississippi 39201-0001
+// Planet Earth
+// Rank: Chief Medical Officer
+// Ship: USS Enterprise
+// Nickname:  Bones
+// Favorite Saying:  "He's dead Jim."
+// Starting Stardate: 41151.8
+// Marital Status:  Divorced
+// Starfleet Graduation Date:  June 21, 2210
+//
+// Provide the code need to DECLARE an array of structures given the above
+// information.  Don't write a program and don't worry about initializing
+// the structure based on the information above.
+// Be careful on how you declare the members of a structure.  Grading
+// will be based on how the flexibility of your design (i.e., define many
+// structures and have structures within structures if necessary).
+// Note:  Don't go overboard such as having a structure with only one member
+// just to create many structures.
+// *******************************************************************
 
+struct name {
+    char title[4];
+    char first_name[41];
+    char middle_initial;
+    char last_name[41];
+    char nickname[16];
+};
 
+struct date {
+    int month;
+    int day;
+    int year;
+};
 
+struct zip_code {
+    char zip[5];
+    char zip_plus_four[4];
+};
 
+struct address {
+    char address_1[41];
+    char address_2[41];
+    char city[21];
+    char state[3];
+    struct zip_code zip;
+    char planet[11];
+};
 
-
-
-
-
-
-
-
-
-
+struct officer_records {
+    struct name officer_name;
+    struct date birth_date;
+    struct address officer_address;
+    int rank; // Ranks can be stored as a number, corresponding to a table of strings
+    int ship; // Ship name can be stored as a number, corresponding to a table of strings
+    char favorite_saying[101];
+    struct date start_date; // Stardate can be calculated from the earth date
+    int marital_status; // Marital status can be stored as a number, corresponding to a table of strings
+    struct date graduation_date;
+};
