@@ -6,7 +6,7 @@ int string_length (const char string[])
 {
     int count = 0;
     
-    while (string[count] != '\0') {
+    while (string[count] != '\0') { //alternately, while (string[count]) can be used because the final character is null
         ++count;
     }
     
