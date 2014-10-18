@@ -113,6 +113,7 @@
 /* Begin PBXFileReference section */
 		0F89789719F0EC24005BFC7D /* Program10.10.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program10.10.c; sourceTree = "<group>"; };
 		0F89789919F10BFA005BFC7D /* Program10.11.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program10.11.c; sourceTree = "<group>"; };
+		0F89789B19F2DB2A005BFC7D /* HomeworkAssignment6JoshuaMiller.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HomeworkAssignment6JoshuaMiller.c; sourceTree = "<group>"; };
 		0F9E7A9019ECE2F300203893 /* C_Programming_UMass */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C_Programming_UMass; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9E7A9319ECE2F300203893 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0FB56CCA19EE5CA1009A7981 /* Program10.4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program10.4.c; sourceTree = "<group>"; };
@@ -376,6 +377,7 @@
 				0FEF2C8619ECE4530064CEDA /* HomeworkAssignment4JoshuaMiller.c */,
 				0FEF2C8719ECE4530064CEDA /* HomeworkAssignment5JoshuaMiller.c */,
 				0FEF2C8819ECE4530064CEDA /* LoopingHomeworkJoshuaMiller.c */,
+				0F89789B19F2DB2A005BFC7D /* HomeworkAssignment6JoshuaMiller.c */,
 			);
 			name = Homework;
 			sourceTree = "<group>";
