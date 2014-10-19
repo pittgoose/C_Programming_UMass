@@ -35,6 +35,13 @@ struct employee
     float gross;
 };
 
+struct totals
+{
+    float total_hours;
+    float total_ot;
+    float total_gross;
+};
+
 int main (void)
 {
     // Initialize an array of structures with the employee number and wage rate
@@ -169,8 +176,8 @@ void print_employee_wages (struct employee employees[], int size)
     // NEW VARIABLES
     float min_array[size];
     float max_array[size];
+    struct totals emp_totals[size];
     
-    // -*-* structure of totals *-*-
     
     // Print out header information for data to be displayed
     printf ("\n--------------------------------------------------------------\n");
