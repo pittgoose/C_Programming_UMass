@@ -264,15 +264,15 @@ void get_maximum (struct employee employees[], float maximum[], int size)
 void print_employee_wages (struct employee employees[], int size)
 {
     int i; // To increment the loop
-    float total_hours = 0;
-    float total_ot = 0;
-    float total_gross = 0;
-    float min_hours = employees[0].hours;
-    float min_ot = employees[0].overtime;
-    float min_gross = employees[0].gross;
-    float max_hours = employees[0].hours;
-    float max_ot = employees[0].overtime;
-    float max_gross = employees[0].gross;
+    
+    float maximum[3] = {0}; // stores the maximum values
+    float minimum[3] = {0}; // stores the minimum values
+    float total[3] = {0}; // Totals to be used for the total and average
+    
+    // Declare functions called
+    void get_totals (struct employee employees[], float total_array[], int size);
+    void get_minimum (struct employee employees[], float minimum[], int size);
+    void get_maximum (struct employee employees[], float maximum[], int size);
     
     // Print out header information for data to be displayed
     printf ("\n--------------------------------------------------------------\n");
