@@ -163,20 +163,13 @@ void calculate_gross_pay (struct employee employees[], int size)
 void print_employee_wages (struct employee employees[], int size)
 {
     int i; // To increment the loop
-    float total_hours = 0;
-    float total_ot = 0;
-    float total_gross = 0;
-    float min_hours = employees[0].hours;
-    float min_ot = employees[0].overtime;
-    float min_gross = employees[0].gross;
-    float max_hours = employees[0].hours;
-    float max_ot = employees[0].overtime;
-    float max_gross = employees[0].gross;
-    
     // NEW VARIABLES
-    float min_array[size];
-    float max_array[size];
     struct totals emp_totals[size];
+    struct totals max_array[size];
+    struct totals min_array[size];
+    float total[3];
+    float minimum[3];
+    float maximum[3];
     
     
     // Print out header information for data to be displayed
@@ -188,38 +181,20 @@ void print_employee_wages (struct employee employees[], int size)
     for (i = 0; i < size; ++i) {
         printf ("%s\t\t%06li\t%.2f\t%.1f\t%.1f\t%4.2f\n", employees[i].name ,employees[i].id_number, employees[i].wage, employees[i].hours, employees[i].overtime, employees[i].gross);
         
-        // Totals and average can be calculated from these variables
-        total_hours += employees[i].hours;
-        total_ot += employees[i].overtime;
-        total_gross += employees[i].gross;
+        emp_totals[i].total_hours += employees[i].hours;
+        emp_totals[i].total_ot += employees[i].overtime;
+        emp_totals[i].total_gross += employees[i].gross;
         
-        // Minimums
-        if (min_hours > employees[i].hours) {
-            min_hours = employees[i].hours;
-        }
+        max_array[i].total_hours += employees[i].hours;
+        max_array[i].total_ot += employees[i].overtime;
+        max_array[i].total_gross += employees[i].gross;
         
-        if (min_ot > employees[i].overtime) {
-            min_ot = employees[i].overtime;
-        }
-        
-        if (min_gross > employees[i].gross) {
-            min_gross = employees[i].gross;
-        }
-        
-        // Maximums
-        if (max_hours < employees[i].hours) {
-            max_hours = employees[i].hours;
-        }
-        
-        if (max_ot < employees[i].overtime) {
-            max_ot = employees[i].overtime;
-        }
-        
-        if (max_gross < employees[i].gross) {
-            max_gross = employees[i].gross;
-        }
-    }
+        min_array[i].total_hours += employees[i].hours;
+        min_array[i].total_ot += employees[i].overtime;
+        min_array[i].total_gross += employees[i].gross;    }
     printf("\n");
+    
+    get_totals (emp_totals, total, size);
  
 
     // Print out various data bits
