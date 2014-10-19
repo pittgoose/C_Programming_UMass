@@ -35,13 +35,6 @@ struct employee
     float gross;
 };
 
-struct totals
-{
-    float total_hours;
-    float total_ot;
-    float total_gross;
-};
-
 int main (void)
 {
     // Initialize an array of structures with the employee number and wage rate
@@ -148,7 +141,7 @@ void calculate_gross_pay (struct employee employees[], int size)
     }
 }
 
-//                  NEW FUNCTIONs!!! COMMENT IT THEM!!!
+// NEW FUNCTIONs!!! COMMENT THEM!!!
 void get_totals (struct employee employees[], float total_array[], int size)
 {
     int i;
@@ -160,6 +153,7 @@ void get_totals (struct employee employees[], float total_array[], int size)
     }
 }
 
+// NEW FUNCTIONs!!! COMMENT THEM!!!
 void get_minimum (struct employee employees[], float minimum[], int size)
 {
     int i;
@@ -184,6 +178,7 @@ void get_minimum (struct employee employees[], float minimum[], int size)
     }
 }
 
+// NEW FUNCTIONs!!! COMMENT THEM!!!
 void get_maximum (struct employee employees[], float maximum[], int size)
 {
     int i;
@@ -208,7 +203,6 @@ void get_maximum (struct employee employees[], float maximum[], int size)
     }
 }
 
-
 // *******************************************************************
 // Function print_employee_wages
 //
@@ -224,10 +218,11 @@ void get_maximum (struct employee employees[], float maximum[], int size)
 void print_employee_wages (struct employee employees[], int size)
 {
     int i; // To increment the loop
+    
+    // comments here
     float total[3] = {0};
     float minimum[3] = {0};
     float maximum[3] = {0};
-    
     
     // Print out header information for data to be displayed
     printf ("\n--------------------------------------------------------------\n");
@@ -240,21 +235,25 @@ void print_employee_wages (struct employee employees[], int size)
     }
     printf("\n");
     
+    // Comments here
     get_totals (employees, total, size);
     get_minimum (employees, minimum, size);
     get_maximum  (employees, maximum, size);
- 
 
     // Print out various data bits
     printf ("--------------------------------------------------------------\n");
+    
     // Total of hours, overtime hours, and gross wages paid
     printf("Total:\t\t\t\t\t%.1f\t%.1f\t\%.2f\n", total[0], total[1], total[2]);
     
     // Average of hours, overtime hours, and gross wages paid
     printf("Average:\t\t\t\t%.1f\t%.1f\t\%.2f\n", total[0] / size, total[1] / size, total[2] / size);
+    
     // Minimum hours, overtime, and gross
     printf("Minimum:\t\t\t\t%.1f\t%.1f\t\%.2f\n", minimum[0], minimum[1], minimum[2]);
+    
     // Maximum hours, overtime, and gross
     printf("Maximum:\t\t\t\t%.1f\t%.1f\t\%.2f\n", maximum[0], maximum[1], maximum[2]);
+    
     printf("\n");
 }
