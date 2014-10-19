@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <meta name="generator" content="HTML Tidy, see www.w3.org">
+        <title>Assignment 7</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body topmargin="0" bottommargin="0" leftmargin="50" rightmargin="0" marginheight="0" marginwidth="50">
+        <h2><span style="font-family:VERDANA, ARIAL, HELVETICA; ">HOMEWORK 6<br>CHARACTER STRINGS</span></h2>
+<span style="font-family:VERDANA, ARIAL, HELVETICA; ">Write a C program that will calculate the gross pay of a set of employees.</span>
+        <p><span style="font-family:VERDANA, ARIAL, HELVETICA; ">The 
+program should prompt the user to enter the number of hours each 
+employee worked. When prompted, key in the hours shown below.</span></p>
+        <p><span style="font-family:VERDANA, ARIAL, HELVETICA; ">The 
+program determines the overtime hours (anything over 40 hours), the 
+gross pay and then outputs a table in the following format. <br><br>Column alignment, leading zeros in Clock#, and zero suppression in float fields is important. <br><br>Use 1.5 as the overtime pay factor.</span></p>
+        <pre><span style="font-family:Courier">    ---------------------------------------------------------
+    Name            Clock#   Wage   Hours     OT     Gross
+    ---------------------------------------------------------
+    Connie Cobol    098401   10.60   51.0    11.0    598.90
+    Mary Apl        526488    9.75   42.5     2.5    426.56
+    Frank Fortran   765349   10.50   37.0     0.0    388.50
+    Jeff Ada        034645   12.25   45.0     5.0    581.88
+    Anton Pascal    127615   10.00   40.0     0.0    400.00
+    ---------------------------------------------------------
+
+    Total:                          215.5    18.5    2395.84
+    Average:                         43.1     3.7    479.168
+    Minimum                          37.0     0.0    388.50
+    Maximum                          51.0    11.0    598.90</span></pre>
+        <p><span style="font-family:VERDANA, ARIAL, HELVETICA; ">Additionally, here are a few more things I would like you to calculate and print out.</span></p>
+        <p><span style="font-family:Arial"><strong>1) These are <span style="text-decoration:underline">mandatory</span> and need to be done:</strong><br><br>&nbsp;&nbsp;&nbsp; a) Add a <strong>Total </strong>row at the end to sum up the hours, ot, and gross columns<br>&nbsp;&nbsp;&nbsp; b) Add an <strong>Average </strong>row to print out the average of the hours, ot, and gross columns<br><br><strong>2) These two <span style="text-decoration:underline">optional</span> challenges if you have time</strong><br><br>&nbsp;&nbsp;&nbsp; a) Calculate and print the <strong>minimum</strong> hours, ot, and gross values<br>&nbsp;&nbsp;&nbsp; b) Calculate and print the <strong>maximum</strong> hours, ot, and gross values </span></p>
+        <p><span style="font-family:VERDANA, ARIAL, HELVETICA; "><br>You
+ should implement this program using a structure similar to the 
+suggested one below to store the information for each 
+employee.&nbsp;&nbsp; Feel free to tweak it if you wish.&nbsp;&nbsp; For
+ example, its OK to have a first and last name member instead of just a 
+name member, and if you want to use different types, that is OK as well.</span></p>
+        <pre><span style="color:Blue"><span style="font-family:VERDANA, ARIAL, HELVETICA; ">    struct employee
+    {
+      char  name [20];
+      long  id_number;
+      float wage;
+      float hours;
+      float overtime;
+      float gross;
+    };</span></span><span style="font-family:VERDANA, ARIAL, HELVETICA; ">
+
+Use the following information to initialize your data.
+
+<span style="font-family:Courier">    Connie Cobol     98401   10.60   
+    Mary Apl        526488    9.75
+    Frank Fortran   765349   10.50
+    Jeff Ada         34645   12.25
+    Anton Pascal    127615   10.00</span>
+</span>
+<span style="font-family:VERDANA, ARIAL, HELVETICA; ">Create an array of structures with 5 elements, each being of type struct employee. 
+
+Initialize the array with the data provided and reference the elements of the array with the appropriate subscripts.</span></pre>
+        <hr noshade="noshade" size="1">
+    
+
+</body></html>

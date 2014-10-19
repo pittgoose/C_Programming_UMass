@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>205ECE5F-1736-41AB-BEF1-5C5926D4A98C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>C_Programming_UMass</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FC41D257C28B60A09D8DAE2FB23CC25B3C64BB58</key>
+		<string>https://github.com/pittgoose/C_Programming_UMass.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>C_Programming_UMass.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FC41D257C28B60A09D8DAE2FB23CC25B3C64BB58</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pittgoose/C_Programming_UMass.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FC41D257C28B60A09D8DAE2FB23CC25B3C64BB58</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FC41D257C28B60A09D8DAE2FB23CC25B3C64BB58</string>
+			<key>IDESourceControlWCCName</key>
+			<string>C_Programming_UMass</string>
+		</dict>
+	</array>
+</dict>
+</plist>
