@@ -148,6 +148,7 @@ void calculate_gross_pay (struct employee employees[], int size)
     }
 }
 
+//                  NEW FUNCTION!!! COMMENT IT!!!
 void get_totals (struct totals emp_totals[], float total_array[], int size)
 {
     int i;
@@ -156,6 +157,25 @@ void get_totals (struct totals emp_totals[], float total_array[], int size)
         total_array[0] += emp_totals[i].total_hours;
         total_array[1] += emp_totals[i].total_ot;
         total_array[2] += emp_totals[i].total_gross;
+    }
+}
+
+void get_minimum (struct totals min_array[], float minimum[], int size)
+{
+    int i;
+    for (i = 0; i < size; ++i) {
+        if (min_array[i].total_hours > employees[i].hours) {
+            minimum[0] = employees[i].hours;
+        }
+        
+        if (min_ot > employees[i].overtime) {
+            min_ot = employees[i].overtime;
+        }
+        
+        if (min_gross > employees[i].gross) {
+            min_gross = employees[i].gross;
+    }
+    
     }
 }
 
@@ -205,7 +225,7 @@ void print_employee_wages (struct employee employees[], int size)
     printf("\n");
     
     get_totals (emp_totals, total, size);
-   // get_minimum (min_array, minimum, size);
+    get_minimum (min_array, minimum, size);
    // get_maximum  (max_array, maximum, size);
  
 
