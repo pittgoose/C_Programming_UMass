@@ -166,12 +166,6 @@ void print_employee_wages (struct employee employees[], int size)
     float max_ot = employees[0].overtime;
     float max_gross = employees[0].gross;
     
-    // NEW VARIABLES
-    float min_array[size];
-    float max_array[size];
-    
-    // -*-* structure of totals *-*-
-    
     // Print out header information for data to be displayed
     printf ("\n--------------------------------------------------------------\n");
     printf ("Name\t\t\tClock#\tWage\tHours\tOT\tGross\n");
