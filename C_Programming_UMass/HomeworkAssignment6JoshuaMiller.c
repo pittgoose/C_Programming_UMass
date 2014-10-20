@@ -24,10 +24,11 @@
 #define OVERTIME_MULTIPLIER 1.5f // Overtime wage calculator
 #define NUM_EMPLOYEES 5 // The program will ask for 5 entries, store 5 values in each array etc.
 #define MAX_HOURS 60 // Does not allow an employee to work more than 60 hours in a week
+#define MAX_NAME_LEN 20 // Maximum name constraint. Can now be changed here at will
 
 struct employee
 {
-    char  name [20];
+    char  name [MAX_NAME_LEN];
     long  id_number;
     float wage;
     float hours;
