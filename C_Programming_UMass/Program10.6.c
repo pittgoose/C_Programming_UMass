@@ -8,7 +8,7 @@ int main (void)
     char line[81];
     void read_line(char buffer[]);
     
-    for (i = 0; i > 3; ++i) {
+    for (i = 0; i < 3; ++i) {
         read_line(line);
         printf("%s\n\n", line);
     }
