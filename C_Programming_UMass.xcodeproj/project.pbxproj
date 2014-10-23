@@ -16,6 +16,7 @@
 		0F736B4219F80452003C582D /* Program11.7.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F736B4119F80452003C582D /* Program11.7.c */; };
 		0F736B4419F81626003C582D /* Program11.8.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F736B4319F81626003C582D /* Program11.8.c */; };
 		0F736B4619F817BB003C582D /* Program11.9.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F736B4519F817BB003C582D /* Program11.9.c */; };
+		0F736B4819F8C6D8003C582D /* Program11.10.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F736B4719F8C6D8003C582D /* Program11.10.c */; };
 		0F89789819F0EC24005BFC7D /* Program10.10.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F89789719F0EC24005BFC7D /* Program10.10.c */; };
 		0F89789A19F10BFA005BFC7D /* Program10.11.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F89789919F10BFA005BFC7D /* Program10.11.c */; };
 		0F89789D19F2E0BB005BFC7D /* HomeworkAssignment6JoshuaMiller.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F89789C19F2E0BB005BFC7D /* HomeworkAssignment6JoshuaMiller.c */; };
@@ -130,6 +131,7 @@
 		0F736B4119F80452003C582D /* Program11.7.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program11.7.c; sourceTree = "<group>"; };
 		0F736B4319F81626003C582D /* Program11.8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program11.8.c; sourceTree = "<group>"; };
 		0F736B4519F817BB003C582D /* Program11.9.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program11.9.c; sourceTree = "<group>"; };
+		0F736B4719F8C6D8003C582D /* Program11.10.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program11.10.c; sourceTree = "<group>"; };
 		0F89789719F0EC24005BFC7D /* Program10.10.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program10.10.c; sourceTree = "<group>"; };
 		0F89789919F10BFA005BFC7D /* Program10.11.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program10.11.c; sourceTree = "<group>"; };
 		0F89789C19F2E0BB005BFC7D /* HomeworkAssignment6JoshuaMiller.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HomeworkAssignment6JoshuaMiller.c; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				0F736B4119F80452003C582D /* Program11.7.c */,
 				0F736B4319F81626003C582D /* Program11.8.c */,
 				0F736B4519F817BB003C582D /* Program11.9.c */,
+				0F736B4719F8C6D8003C582D /* Program11.10.c */,
 			);
 			name = "Chapter 11";
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				0FEF2CDC19ECE4530064CEDA /* Program4.1.c in Sources */,
 				0FEF2D0419ECE4530064CEDA /* Program8.10.c in Sources */,
 				0FEF2CCA19ECE4530064CEDA /* Chapter5Exercise2.c in Sources */,
+				0F736B4819F8C6D8003C582D /* Program11.10.c in Sources */,
 				0FEF2CD919ECE4530064CEDA /* Program3.4.c in Sources */,
 				0F736B4219F80452003C582D /* Program11.7.c in Sources */,
 				0FB56CCB19EE5CA1009A7981 /* Program10.4.c in Sources */,
