@@ -47,10 +47,10 @@ int main (void)
     };
     
     // Function declarations
-    void get_hours (struct employee employees[], int size);
-    void calculate_gross_pay (struct employee employees[], int size);
-    void calculate_overtime (struct employee employees[], int size);
-    void print_employee_wages (struct employee employees[], int size);
+    void get_hours (struct employee *emp_ptr, int size);
+    void calculate_gross_pay (struct employee *emp_ptr, int size);
+    void calculate_overtime (struct employee *emp_ptr, int size);
+    void print_employee_wages (struct employee *emp_ptr, int size);
     
     //-*-*-*-*-Begin creating the nuts and bolts-*-*-*-*-
     get_hours(employees, NUM_EMPLOYEES);
@@ -72,18 +72,18 @@ int main (void)
 // Returns: Nothing (void)
 //
 // *******************************************************************
-void get_hours (struct employee employees[], int size)
+void get_hours (struct employee *emp_ptr, int size)
 {
     int i; // To increment the loop
     
-    for (i = 0; i < size; ++i) {
+    for (i = 0; i < size; ++emp_ptr, ++i) {
         // Request the number of hours worked for each employee
-        printf("Please enter the number of hours worked for employee %s: ", employees[i].name);
-        scanf("%f", &employees[i].hours);
+        printf("Please enter the number of hours worked for employee %s: ", emp_ptr->name);
+        scanf("%f", &emp_ptr->hours);
         
         // Make sure the hours entered is in a proper range
-        while (employees[i].hours < 0 || employees[i].hours > MAX_HOURS) {
-            printf("*That is not a valid number of hours.* \nPlease re-enter the number of hours worked for employee %s: ", employees[i].name);            scanf("%f", &employees[i].hours);
+        while (emp_ptr->hours < 0 || emp_ptr->hours > MAX_HOURS) {
+            printf("*That is not a valid number of hours.* \nPlease re-enter the number of hours worked for employee %s: ", emp_ptr->name);            scanf("%f", &emp_ptr->hours);
         }
     }
 }
@@ -101,18 +101,18 @@ void get_hours (struct employee employees[], int size)
 // Returns: Nothing (void)
 //
 // *******************************************************************
-void calculate_overtime (struct employee employees[], int size)
+void calculate_overtime (struct employee *emp_ptr, int size)
 {
     int i; // To increment the loop
     
-    for (i = 0; i < size; ++i) {
+    for (i = 0; i < size; ++emp_ptr, ++i) {
         // Calculate the overtime hours if an employee worked over the standard amount
-        if (employees[i].hours > STD_HOURS) {
-            employees[i].overtime = employees[i].hours - STD_HOURS;
+        if (emp_ptr->hours > STD_HOURS) {
+            emp_ptr->overtime = emp_ptr->hours - STD_HOURS;
         }
         else {
             // If the employee didn't work any overtime hours 0 is set as the value
-            employees[i].overtime = 0;
+            emp_ptr->overtime = 0;
         }
     }
 }
@@ -129,124 +129,18 @@ void calculate_overtime (struct employee employees[], int size)
 // Returns: Nothing (void)
 //
 // *******************************************************************
-
-void calculate_gross_pay (struct employee employees[], int size)
+void calculate_gross_pay (struct employee *emp_ptr, int size)
 {
     int i; // To increment the loop
     
-    for (i = 0; i < size; ++i) {
+    for (i = 0; i < size; ++emp_ptr, ++i) {
         // Calculate the gross pay if overtime was worked
-        if (employees[i].overtime > 0) {
-            employees[i].gross = STD_HOURS * employees[i].wage; // Calculates pay for standard hours
+        if (emp_ptr->overtime > 0) {
+            emp_ptr->gross = STD_HOURS * emp_ptr->wage; // Calculates pay for standard hours
             // Calculates pay for overtime hours and adds it to the total
-            employees[i].gross += employees[i].overtime * employees[i].wage * OVERTIME_MULTIPLIER;         }
+            emp_ptr->gross += emp_ptr->overtime * emp_ptr->wage * OVERTIME_MULTIPLIER;         }
         else { // If no overtime was worked
-            employees[i].gross = employees[i].wage * employees[i].hours;
-        }
-    }
-}
-
-// *******************************************************************
-// Function get_totals
-//
-// Purpose: This function will take the employees array and a totals
-//          array and calculate the maximum of hours, overtime, and
-//          gross for all employees
-//
-// Parameters: employees - the array of structures for employees
-//             maximum - keeps the maximum of each type
-//             size - the number of employees to input
-//
-// Returns: Nothing (void)
-//
-// *******************************************************************
-void get_totals (struct employee employees[], float total_array[], int size)
-{
-    int i; // To increment the loop
-    
-    // add all values in the employees array of hours, overtime and gross together and return the sums
-    for (i = 0; i < size; ++i) {
-        total_array[0] += employees[i].hours;
-        total_array[1] += employees[i].overtime;
-        total_array[2] += employees[i].gross;
-    }
-}
-
-// *******************************************************************
-// Function get_minimum
-//
-// Purpose: This function will take the employees array and a minimum
-//          array and calculate the minimum of hours, overtime, and
-//          gross for all employees
-//
-// Parameters: employees - the array of structures for employees
-//             minimum - keeps the minimum of each type
-//             size - the number of employees to input
-//
-// Returns: Nothing (void)
-//
-// *******************************************************************
-void get_minimum (struct employee employees[], float minimum[], int size)
-{
-    int i; // To increment the loop
-    
-    // Initialize the first value in the array to the first value in the employees array
-    minimum[0] = employees[0].hours;
-    minimum[1] = employees[0].overtime;
-    minimum[2] = employees[0].gross;
-    
-    // starting with the second array position, decide if each element is greater than the next one. if so, set the lesser one to be the minimum
-    for (i = 1; i < size; ++i) {
-        if (minimum[0] > employees[i].hours) {
-            minimum[0] = employees[i].hours;
-        }
-        
-        if (minimum[1] > employees[i].overtime) {
-            minimum[1] = employees[i].overtime;
-        }
-        
-        if (minimum[2] > employees[i].gross) {
-            minimum[2] = employees[i].gross;
-        }
-        
-    }
-}
-
-// *******************************************************************
-// Function get_maximum
-//
-// Purpose: This function will take the employees array and a maximum
-//          array and calculate the maximum of hours, overtime, and
-//          gross for all employees
-//
-// Parameters: employees - the array of structures for employees
-//             maximum - keeps the maximum of each type
-//             size - the number of employees to input
-//
-// Returns: Nothing (void)
-//
-// *******************************************************************
-void get_maximum (struct employee employees[], float maximum[], int size)
-{
-    int i; // To increment the loop
-    
-    // Initialize the first value in the array to the first value in the employees array
-    maximum[0] = employees[0].hours;
-    maximum[1] = employees[0].overtime;
-    maximum[2] = employees[0].gross;
-    
-    // starting with the second array position, decide if each element is less than the next one. if so, set the greater one to be the largest
-    for (i = 1; i < size; ++i) {
-        if (maximum[0] < employees[i].hours) {
-            maximum[0] = employees[i].hours;
-        }
-        
-        if (maximum[1] < employees[i].overtime) {
-            maximum[1] = employees[i].overtime;
-        }
-        
-        if (maximum[2] < employees[i].gross) {
-            maximum[2] = employees[i].gross;
+            emp_ptr->gross = emp_ptr->wage * emp_ptr->hours;
         }
     }
 }
@@ -263,18 +157,14 @@ void get_maximum (struct employee employees[], float maximum[], int size)
 // Returns: Nothing (void)
 //
 // *******************************************************************
-void print_employee_wages (struct employee employees[], int size)
+void print_employee_wages (struct employee *emp_ptr, int size)
 {
     int i; // To increment the loop
     
-    float maximum[3] = {0}; // stores the maximum values
-    float minimum[3] = {0}; // stores the minimum values
-    float total[3] = {0}; // Totals to be used for the total and average
-    
     // Declare functions called
-    void get_totals (struct employee employees[], float total_array[], int size);
-    void get_minimum (struct employee employees[], float minimum[], int size);
-    void get_maximum (struct employee employees[], float maximum[], int size);
+    void get_totals (struct employee *emp_ptr, float total_array[], int size);
+    void get_minimum (struct employee *emp_ptr, float minimum[], int size);
+    void get_maximum (struct employee *emp_ptr, float maximum[], int size);
     
     // Print out header information for data to be displayed
     printf ("\n--------------------------------------------------------------\n");
@@ -282,30 +172,8 @@ void print_employee_wages (struct employee employees[], int size)
     printf ("--------------------------------------------------------------\n");
     
     // Print out employee information to the screen
-    for (i = 0; i < size; ++i) {
-        printf ("%s\t\t%06li\t%.2f\t%.1f\t%.1f\t%4.2f\n", employees[i].name ,employees[i].id_number, employees[i].wage, employees[i].hours, employees[i].overtime, employees[i].gross);
+    for (i = 0; i < size; ++emp_ptr, ++i) {
+        printf ("%s\t\t%06li\t%.2f\t%.1f\t%.1f\t%4.2f\n", emp_ptr->name ,emp_ptr->id_number, emp_ptr->wage, emp_ptr->hours, emp_ptr->overtime, emp_ptr->gross);
     }
-    printf("\n");
-    
-    // run the stats functions
-    get_totals (employees, total, size);
-    get_minimum (employees, minimum, size);
-    get_maximum  (employees, maximum, size);
-    
-    // Print out various stats
-    printf ("--------------------------------------------------------------\n");
-    
-    // Total of hours, overtime hours, and gross wages paid
-    printf("Total:\t\t\t\t\t%.1f\t%.1f\t\%.2f\n", total[0], total[1], total[2]);
-    
-    // Average of hours, overtime hours, and gross wages paid
-    printf("Average:\t\t\t\t%.1f\t%.1f\t\%.2f\n", total[0] / size, total[1] / size, total[2] / size);
-    
-    // Minimum hours, overtime, and gross
-    printf("Minimum:\t\t\t\t%.1f\t%.1f\t\%.2f\n", minimum[0], minimum[1], minimum[2]);
-    
-    // Maximum hours, overtime, and gross
-    printf("Maximum:\t\t\t\t%.1f\t%.1f\t\%.2f\n", maximum[0], maximum[1], maximum[2]);
-    
     printf("\n");
 }
