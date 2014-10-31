@@ -1,12 +1,6 @@
 // *******************************************************************
-//1)  Write a macro for each of the following:
-//
-//a) Area of a Circle
-//b) Area of a Square
-//c) Area of a Rectangle
-//d) Area of a Triangle
-//
-//You can find formulas and detailed explanations at:  http://www.mathisfun.com
+//2)  Write a function which will determine how many words are in a given string.  You can assume that one or more
+//consecutive white spaces is a delimiter between words, and that the string you pass to your function is null terminated.
 // *******************************************************************
 
 
