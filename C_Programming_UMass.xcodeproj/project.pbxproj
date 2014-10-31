@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F5FECAF1A030884001898D9 /* Scratch.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F5FECAE1A030884001898D9 /* Scratch.c */; };
 		0F736B3619F60A16003C582D /* Program11.1.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F736B3519F60A16003C582D /* Program11.1.c */; };
 		0F736B3819F62981003C582D /* Program11.2.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F736B3719F62981003C582D /* Program11.2.c */; };
 		0F736B3A19F6B544003C582D /* Program11.3.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F736B3919F6B544003C582D /* Program11.3.c */; };
@@ -128,6 +129,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F5FECAE1A030884001898D9 /* Scratch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Scratch.c; sourceTree = "<group>"; };
+		0F5FECB01A03089B001898D9 /* Miller_Final.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Miller_Final.c; sourceTree = "<group>"; };
 		0F736B3519F60A16003C582D /* Program11.1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program11.1.c; sourceTree = "<group>"; };
 		0F736B3719F62981003C582D /* Program11.2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program11.2.c; sourceTree = "<group>"; };
 		0F736B3919F6B544003C582D /* Program11.3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program11.3.c; sourceTree = "<group>"; };
@@ -249,6 +252,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F5FECAD1A030862001898D9 /* Final */ = {
+			isa = PBXGroup;
+			children = (
+				0F5FECAE1A030884001898D9 /* Scratch.c */,
+				0F5FECB01A03089B001898D9 /* Miller_Final.c */,
+			);
+			name = Final;
+			sourceTree = "<group>";
+		};
 		0F736B3419F60A02003C582D /* Chapter 11 */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +311,7 @@
 				0FEF2D1919ECE4CB0064CEDA /* Chapter 9 */,
 				0FEF2D1C19ECE86F0064CEDA /* Chapter 10 */,
 				0F736B3419F60A02003C582D /* Chapter 11 */,
+				0F5FECAD1A030862001898D9 /* Final */,
 				0FEF2D1A19ECE4D50064CEDA /* Homework */,
 				0F9E7A9319ECE2F300203893 /* main.c */,
 				0FEF2D1B19ECE4E10064CEDA /* Midterm */,
@@ -596,6 +609,7 @@
 				0FEF2D0F19ECE4530064CEDA /* Program9.4.c in Sources */,
 				0FEF2CD019ECE4530064CEDA /* CoolStuff.c in Sources */,
 				0FEF2D0919ECE4530064CEDA /* Program8.14.c in Sources */,
+				0F5FECAF1A030884001898D9 /* Scratch.c in Sources */,
 				0FEF2D2119ED80120064CEDA /* Program10.2.c in Sources */,
 				0FEF2CF519ECE4530064CEDA /* Program7.1.c in Sources */,
 				0FF8347319FFD6ED007EB549 /* HomeworkAssignment7JoshuaMiller.c in Sources */,
