@@ -2,8 +2,9 @@
 //2)  Write a function which will determine how many words are in a given string.  You can assume that one or more
 //consecutive white spaces is a delimiter between words, and that the string you pass to your function is null terminated.
 // *******************************************************************
-
-
+#include <stdlib.h>
+#include <stdctype.h>
+#include <stdio.h>
 // *******************************************************************
 //3)  Write a function that is passed a month, day, and year and will determine if
 //that date is valid.   You can assume each parameter is passed in as an integer.
