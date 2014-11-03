@@ -1,129 +1,26 @@
-/*
-Homework 8 Template
-
-Try this example and use it as a guide to your last homework (number 8).  You just really need to expand upon it.
-
-Add the missing members to the struct employee type, and add functions as needed (such as ones to calculate overtime and gross pay).
-
-I added comments in green below that start with TODO to indicate what needs to change.
-
-Relax, its OK if you use this code as is and then expand from it ... you have my permission to use all of it.
-*/
-
 #include <stdio.h>
-#include <stdlib.h>   /* for malloc */
-#include <ctype.h>
 
-struct employee
-{
-    int id_number;
-    float wage;
-    
-    /* TODO - Add other members */
-    
-    struct employee *next;
-};
+/* First, define a function */
 
-/*-----------------------------------------------------------------------------*/
-/*                                                                             */
-/* FUNCTION:  print_list                                                       */
-/*                                                                             */
-/* DESCRIPTION:  This function will print the contents of a linked             */
-/*               list.  It will traverse the list from beginning to the        */
-/*               end, printing the contents at each node.                      */
-/*                                                                             */
-/* PARAMETERS:   emp1 - pointer to a linked list                               */
-/*                                                                             */
-/* OUTPUTS:      None                                                          */
-/*                                                                             */
-/* CALLS:        None                                                          */
-/*                                                                             */
-/*-----------------------------------------------------------------------------*/
-void print_list(struct employee *emp1)
+int sum (int num1, int num2)
 {
-    struct employee *tmp;   /* tmp pointer value to current node */
-    int i = 0;              /* counts the nodes printed          */
-    
-    /* Start a beginning of list and print out each value               */
-    /* loop until tmp points to null (remember null is 0 or false)      */
-    for(tmp = emp1; tmp ; tmp = tmp->next)
-    {
-        i++;
-        
-        /* TODO - print other members as well */
-        printf("\nEmployee ID: %6d, Wage: %8.2f\n",tmp->id_number,
-               tmp->wage);
-    }
-    
-    printf("\n\nTotal Number of Employees = %d\n", i);
-    
+    return (num1 + num2);
 }
 
-/*----------------------------------------------------------------------------*/
-/*                                                                            */
-/* FUNCTION:  main                                                            */
-/*                                                                            */
-/* DESCRIPTION:  This function will prompt the user for an employee           */
-/*               id and wage until the user indicates they are finished.      */
-/*               At that point, a list of id and wages will be                */
-/*               generated.                                                   */
-/*                                                                            */
-/* PARAMETERS:   None                                                         */
-/*                                                                            */
-/* OUTPUTS:      None                                                         */
-/*                                                                            */
-/* CALLS:        print_list                                                   */
-/*                                                                            */
-/*----------------------------------------------------------------------------*/
 int main ()
 {
+    /* Second, define a pointer to a function which */
+    /* receives 2 ints and returns an int */
+    int ( *functionPtr ) (int, int);
     
-    char   answer[80];       /* to see if the user wants to add more employees */
-    int    more_data = 1;    /* flag to check if another employee is to be processed */
-    char   value;             /* gets the first character of answer */
+    /* point to address of our sum function */
+    functionPtr = &sum;
     
-    struct employee *current_ptr,   /* pointer to current node */
-    *head_ptr;       /* always points to first node */
+    /* Finally, let's actually use our function pointer */
+    int mySum = (*functionPtr)(5, 10); /* the sum is 15 */
     
-    /* Set up storage for first node */
-    head_ptr = (struct employee *) malloc (sizeof(struct employee));
-    current_ptr = head_ptr;
+    printf ("mySum is %i \n", mySum);
     
-    while (more_data)
-    {
-        
-        
-        /* TODO - Prompt for Employee Name and Hours as well here */
-        
-        /* Read in Employee ID and Hourly Wage */
-        printf("\nEnter employee ID: ");
-        scanf("%i", & current_ptr -> id_number);
-        
-        printf("\nEnter employee hourly wage: ");
-        scanf("%f", & current_ptr -> wage);
-        
-        printf("Would you like to add another employee? (y/n): ");
-        scanf("%s", answer);
-        
-        /* Ask user if they want to add another employee */
-        if ((value = toupper(answer[0])) != 'Y')
-        {
-            current_ptr->next = (struct employee *) NULL;
-            more_data = 0;
-        }
-        else
-        {
-            /* set the next pointer of the current node to point to the new node */
-            current_ptr->next = (struct employee *) malloc (sizeof(struct employee));
-            /* move the current node pointer to the new node */
-            current_ptr = current_ptr->next;
-        }
-    } /* while */
+    return (0);
     
-    /* print out listing of all employee id's and wages that were entered */
-    print_list(head_ptr);
-    
-    printf("\n\nEnd of program\n");
-    return 0;
 }
-
