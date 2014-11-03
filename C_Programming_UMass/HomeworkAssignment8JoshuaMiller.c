@@ -2,6 +2,13 @@
 #include <stdlib.h>   /* for malloc */
 #include <ctype.h>
 
+// CONSTANTS
+#define STD_HOURS 40.0f // Standard number of work hours per week
+#define OVERTIME_MULTIPLIER 1.5f // Overtime wage calculator
+#define NUM_EMPLOYEES 5 // The program will ask for 5 entries, store 5 values in each array etc.
+#define MAX_HOURS 60 // Does not allow an employee to work more than 60 hours in a week
+#define MAX_NAME_LEN 20 // Maximum name constraint. Can now be changed here at will
+
 struct employee
 {
     char first_name [10];
@@ -14,6 +21,60 @@ struct employee
     
     struct employee *next;
 };
+// *******************************************************************
+// Function calculate_overtime
+//
+// Purpose: This function will calculate the number of overtime
+//          hours worked by a given number of employees. It will
+//          save each value into an array.
+//
+// Parameters: emp1 - a pointer to a linked list
+//
+// Returns: Nothing (void)
+//
+// *******************************************************************
+void calculate_overtime (struct employee *emp1)
+{
+    struct employee *tmp;   /* tmp pointer value to current node */
+    
+    for (tmp = emp1; tmp ; tmp = tmp->next) {
+        // Calculate the overtime hours if an employee worked over the standard amount
+        if (tmp->hours > STD_HOURS) {
+            tmp->overtime = tmp->hours - STD_HOURS;
+        }
+        else {
+            // If the employee didn't work any overtime hours 0 is set as the value
+            tmp->overtime = 0;
+        }
+    }
+}
+
+// *******************************************************************
+// Function calculate_gross_pay
+//
+// Purpose: This function will calculate the gross pay for a given
+//          number of employees.
+//
+// Parameters: emp1 - a pointer to a linked list
+//
+// Returns: Nothing (void)
+//
+// *******************************************************************
+void calculate_gross_pay (struct employee *emp1)
+{
+    struct employee *tmp;   /* tmp pointer value to current node */
+    
+    for (tmp = emp1; tmp ; tmp = tmp->next) {
+        // Calculate the gross pay if overtime was worked
+        if (tmp->overtime > 0) {
+            tmp->gross = STD_HOURS * tmp->wage; // Calculates pay for standard hours
+            // Calculates pay for overtime hours and adds it to the total
+            tmp->gross += tmp->overtime * tmp->wage * OVERTIME_MULTIPLIER;         }
+        else { // If no overtime was worked
+            tmp->gross = tmp->wage * tmp->hours;
+        }
+    }
+}
 
 /*-----------------------------------------------------------------------------*/
 /*                                                                             */
@@ -117,10 +178,8 @@ int main ()
     } /* while */
     
     /* perform the necessary calculations on the employees */
-    get_hours(employees, NUM_EMPLOYEES);
-    calculate_overtime(employees, NUM_EMPLOYEES);
-    calculate_gross_pay(employees, NUM_EMPLOYEES);
-    print_employee_wages(employees, NUM_EMPLOYEES);
+    calculate_overtime(head_ptr);
+    calculate_gross_pay(head_ptr);
     
     /* print out listing of all employee id's and wages that were entered */
     print_list(head_ptr);
