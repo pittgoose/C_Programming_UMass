@@ -15,6 +15,8 @@
 #define AREA_OF_RECTANGLE(width,height) (width * height)
 #define AREA_OF_TRIANGLE(base,height) (.5 * base * height)
 
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
 // *******************************************************************
 //2)  Write a function which will determine how many words are in a given string.  You can assume that one or more
 //consecutive white spaces is a delimiter between words, and that the string you pass to your function is null terminated.
@@ -83,7 +85,7 @@ bool is_alphabetic (const char c)
     }
 }
 
-
+//--------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
