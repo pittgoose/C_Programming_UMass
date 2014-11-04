@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F08E4871A0567E80043582E /* Scratch2.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F08E4861A0567E80043582E /* Scratch2.c */; };
 		0F08E4891A0576820043582E /* HomeworkAssignment8JoshuaMiller.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F08E4881A0576820043582E /* HomeworkAssignment8JoshuaMiller.c */; };
+		0F08E48D1A0896270043582E /* Final_Qs.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F08E48C1A0896270043582E /* Final_Qs.c */; };
 		0F5FECAF1A030884001898D9 /* Scratch.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F5FECAE1A030884001898D9 /* Scratch.c */; };
 		0F736B3619F60A16003C582D /* Program11.1.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F736B3519F60A16003C582D /* Program11.1.c */; };
 		0F736B3819F62981003C582D /* Program11.2.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F736B3719F62981003C582D /* Program11.2.c */; };
@@ -133,6 +134,7 @@
 /* Begin PBXFileReference section */
 		0F08E4861A0567E80043582E /* Scratch2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Scratch2.c; sourceTree = "<group>"; };
 		0F08E4881A0576820043582E /* HomeworkAssignment8JoshuaMiller.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HomeworkAssignment8JoshuaMiller.c; sourceTree = "<group>"; };
+		0F08E48C1A0896270043582E /* Final_Qs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Final_Qs.c; path = ../Final_Qs.c; sourceTree = "<group>"; };
 		0F5FECAE1A030884001898D9 /* Scratch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Scratch.c; sourceTree = "<group>"; };
 		0F5FECB01A03089B001898D9 /* Miller_Final.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Miller_Final.c; sourceTree = "<group>"; };
 		0F736B3519F60A16003C582D /* Program11.1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Program11.1.c; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			children = (
 				0F5FECAE1A030884001898D9 /* Scratch.c */,
 				0F5FECB01A03089B001898D9 /* Miller_Final.c */,
+				0F08E48C1A0896270043582E /* Final_Qs.c */,
 			);
 			name = Final;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				0FF8346F19FEF5FF007EB549 /* Program11.14.c in Sources */,
 				0FEF2D0319ECE4530064CEDA /* Program8.9.c in Sources */,
 				0F736B3A19F6B544003C582D /* Program11.3.c in Sources */,
+				0F08E48D1A0896270043582E /* Final_Qs.c in Sources */,
 				0F89789819F0EC24005BFC7D /* Program10.10.c in Sources */,
 				0F736B4419F81626003C582D /* Program11.8.c in Sources */,
 				0FEF2D0019ECE4530064CEDA /* Program8.6.c in Sources */,
