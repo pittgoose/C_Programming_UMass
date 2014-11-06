@@ -1,95 +1,69 @@
 // *******************************************************************
-// 3)  Write a function that is passed a month, day, and year and will determine if
-// that date is valid.   You can assume each parameter is passed in as an integer.
-// Remember to check for leap year!
+//4)  Write a function that takes the values of a two-card blackjack hands as input, and returns the point total of the hand. The value
+//of the cards '2' through '9' is equal to their face value, the cards 'T', 'K', 'Q', 'J' are worth 10 points and the ace ('A') is worth 11 points
+//unless it comes with another ace, then that second ace is worth 1 point. The program should be able to catch incorrect input.
 //
-// validDate (5, 31, 1961)    .... would be valid
+//Enter cards: A Q
+//The score is 21
 //
-// validDate (13, 4, 1967)    ... would be invalid, the month is invalid
+//Enter cards: A A
+//The score is 12
+//
+//Enter cards: T 7
+//The score is 17
+//
+//Enter cards: A 5
+//The score is 16
+//
+//Enter cards: 7 #
+//*** Would be invalid, # is not a valid card
+//
+//Enter cards: Z 4
+//*** Would be invalid, Z is not a valid card
+//
+//Hint:  I've used a value of 'T' for the 10 card so you can simply pass in two characters,
+//instead of strings, as parameters to this function.
 // *******************************************************************
-
 #include <stdbool.h>
 #include <stdio.h>
-
-// *******************************************************************
-// FUNCTION:    valid_date
-//
-// DESCRIPTION: This function will take a date in three integer values
-//              and return true or false if it is a valid date or not.
-//
-// PARAMETERS:  month - the month
-//              day - the day
-//              year - the year
-//
-// OUTPUTS:     bool - true or false
-//
-// CALLS:       number_days - gets the number of days in the month,
-//                            depending on the month and year.
-// *******************************************************************
-bool valid_date (int month, int day, int year)
+#include <stdlib.h>
+int blackjack_hand (char card1, char card2)
 {
-    int number_days (int month, int year);
-    if (month < 1 || month > 12) {
-        return false;
-    }
-    if (day < 1 || day > number_days(month, year)) {
-        return false;
-    }
-    if (year < 0) {
-        return false;
-    }
-    return true;
-}
-
-// *******************************************************************
-// FUNCTION:    number_days
-//
-// DESCRIPTION: This function will take a month and year and return
-//              the number of days in that month.
-//
-// PARAMETERS:  month - the month
-//              year - the year
-//
-// OUTPUTS:     int - number of days in the month
-//
-// CALLS:       is_leap_year
-// *******************************************************************
-int number_days (int month, int year){
-    int days;
-    bool is_leap_year (int year);
-    const int days_per_month[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    bool valid_card (char card);
     
-    if (is_leap_year(year) && month == 2) {
-        days = 29;
+    // TODO make cards to upper
+    
+    
+    // check that both inputs are valid
+    if (!valid_card(card1) || !valid_card(card2)) {
+        return -1;
     }
-    else {
-        days = days_per_month[month - 1];
-    }
-    return days;
+    
 }
 
-// *******************************************************************
-// FUNCTION:    is_leap_year
-//
-// DESCRIPTION: This function will take a year and determine if it is
-//              a leap year.
-//
-// PARAMETERS:  year - the year
-//
-// OUTPUTS:     bool - true or false
-//
-// CALLS:       none
-// *******************************************************************
-bool is_leap_year (int year) {
-    bool leap_year_flag;
-    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-        leap_year_flag = true;
+bool valid_card (char card)
+{
+    if ((card <= 9 && card >= 2) || card == 'A' || card == 'T' || card == 'J' || card == 'Q' || card == 'K') {
+        return true;
+    } else {
+        return false;
     }
-    else {
-        leap_year_flag = false;
-    }
-    return leap_year_flag;
 }
+
+
+
+
+
+
+int main (void)
+{
+    printf("%i\n", valid_card('2'));
+}
+
+
+
+
+
 
 
 

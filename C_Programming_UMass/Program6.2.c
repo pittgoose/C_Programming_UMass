@@ -16,7 +16,7 @@
 
 int main(void) {
     //-*-*-*-*-Variable Declarations-*-*-*-*-
-    float average;
+    float average = 0;
     int failure_count = 0;
     int grade;
     int grade_total = 0;
