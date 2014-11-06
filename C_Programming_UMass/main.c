@@ -1,44 +1,75 @@
-//----------------------------------------------------
-//
-// HOMEWORK: fill in the assignment number
-//
-// Name: Joshua Miller
-//
-// Class: C Programming
-//
-// Date:
-//
-// Description: short description of the program
-//
-//----------------------------------------------------
-
 #include <stdio.h>
+#include <stdlib.h> /* for malloc */
+#include <string.h> /* for strcpy */
 
-int main(void) {
-    //-*-*-*-*-Variable Declarations-*-*-*-*-
+#define STD_HOURS 40.0
+#define OT_RATE 1.5
+
+/* define employee structure */
+typedef struct employee
+{
+    char name[20];
+    long id_number;
+    float wage;
+    float hours;
+    float overtime;
+    float gross;
     
+} EMPLOYEE;
+
+/* define linked list of employees */
+
+typedef struct linked_list_node
+{
+    EMPLOYEE emp;
+    struct linked_list_node *next;
     
-    
-    //-*-*-*-*-Begin creating the nuts and bolts-*-*-*-*-
-    
-    
-    
-    
-    return 0;
+} LINKED_LIST_NODE;
+
+//---------------------------------------------------
+//
+// FUNCTION: create_node
+//
+// DESCRIPTION: Creates a node for the linked list.
+//
+// PARAMETERS: None
+//
+// OUTPUTS: A new node for the linked list
+//
+//-----------------------------------------------------
+LINKED_LIST_NODE * create_node ()
+{
+    return (LINKED_LIST_NODE *) malloc(sizeof(struct linked_list_node));
 }
 
-// *******************************************************************
-// Function Calc_Gross_Pay
-//
-// Purpose: This function will calculate the gross pay for five
-// employees. It will add to the gross pay any overtime
-// pay if necessary.
-//
-// Parameters: wage - rate of pay for the employee
-//             hours - # of hours the employee worked
-//             ot_pay - overtime pay for the employee
-//
-// Returns: gross pay (including any overtime pay) for the employee
-//
-// *******************************************************************
-
+int main ( )
+{
+    /* pointer to a linked list node */
+    LINKED_LIST_NODE * ptr;
+    
+    /* create and point to one node in the heap */
+    ptr = create_node ( );
+    
+    strcpy (ptr->emp.name, "Tim Niesen");
+    ptr->emp.id_number = 12345;
+    ptr->emp.wage = 200.25;
+    ptr->emp.hours = 40.0;
+    
+    /* Determine ot hours and gross pay */
+    if (ptr->emp.hours > STD_HOURS)
+    {
+        ptr->emp.overtime = ptr->emp.hours - STD_HOURS;
+        ptr->emp.gross = (ptr->emp.wage * STD_HOURS)
+        + (ptr->emp.overtime *
+           (ptr->emp.wage * OT_RATE));
+    }
+    else /* no ot */
+    {
+        ptr->emp.overtime = 0;
+        ptr->emp.gross = ptr->emp.wage * ptr->emp.hours;
+    }
+    
+    printf ("Total Gross Pay: $%8.2f \n", ptr->emp.gross);
+    
+    return (0);
+}

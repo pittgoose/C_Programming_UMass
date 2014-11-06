@@ -10,6 +10,22 @@
 
 #include <stdbool.h>
 #include <stdio.h>
+
+// *******************************************************************
+// FUNCTION:    valid_date
+//
+// DESCRIPTION: This function will take a date in three integer values
+//              and return true or false if it is a valid date or not.
+//
+// PARAMETERS:  month - the month
+//              day - the day
+//              year - the year
+//
+// OUTPUTS:     bool - true or false
+//
+// CALLS:       number_days - gets the number of days in the month,
+//                            depending on the month and year.
+// *******************************************************************
 bool valid_date (int month, int day, int year)
 {
     int number_days (int month, int year);
@@ -25,6 +41,19 @@ bool valid_date (int month, int day, int year)
     return true;
 }
 
+// *******************************************************************
+// FUNCTION:    number_days
+//
+// DESCRIPTION: This function will take a month and year and return
+//              the number of days in that month.
+//
+// PARAMETERS:  month - the month
+//              year - the year
+//
+// OUTPUTS:     int - number of days in the month
+//
+// CALLS:       is_leap_year
+// *******************************************************************
 int number_days (int month, int year){
     int days;
     bool is_leap_year (int year);
@@ -39,7 +68,18 @@ int number_days (int month, int year){
     return days;
 }
 
-// Function to determine if it's a leap year
+// *******************************************************************
+// FUNCTION:    is_leap_year
+//
+// DESCRIPTION: This function will take a year and determine if it is
+//              a leap year.
+//
+// PARAMETERS:  year - the year
+//
+// OUTPUTS:     bool - true or false
+//
+// CALLS:       none
+// *******************************************************************
 bool is_leap_year (int year) {
     bool leap_year_flag;
     if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
@@ -50,23 +90,6 @@ bool is_leap_year (int year) {
     }
     return leap_year_flag;
 }
-
-
-
-
-
-
-
-int main (void)
-{
-    printf("%i\n", valid_date(2, 29, 2004));
-}
-
-
-
-
-
-
 
 
 
