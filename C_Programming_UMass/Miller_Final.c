@@ -297,6 +297,54 @@ bool valid_card (char card)
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
+// *******************************************************************
+//5) Write a function to determine is a given word is legal.   A word is illegal if it contains no vowels. For this problem,
+//the letter Y is considered to be a legal vowel.   Pass in a word to this function and it will determine if the word is
+//legal or not.   You can make the following assumptions about the word you a passing to this function.
+//
+//1) The string being passed is a combination of letters only (no non-letter check needed)
+//2) The string being passed is null terminated
+//3) Letters may be capital or lower case and it has no effect on whether its a word
+//
+//Examples:
+//
+//sch  - is illegal, no vowels
+//apple - legal, contains a vowel
+//APPle - legal, uppercase letter combinations do not matter
+//try - legal, no vowel, but contains the letter 'y'
+// *******************************************************************
+
+// *******************************************************************
+// FUNCTION:    is_word_legal
+//
+// DESCRIPTION: This function will traverse a character string and
+//              determine if it is a legal word (has a vowel or a y)
+//
+// PARAMETERS:  *str_ptr - a pointer to the first value in the string
+//
+// OUTPUTS:     bool - true or false
+//
+// CALLS:       none
+// *******************************************************************
+bool is_word_legal (char *str_ptr)
+{
+    // check the string 1 character at a time
+    while (*str_ptr) {
+        // check if the current char is a vowel or y
+        if (tolower(*str_ptr) == 'a' || tolower(*str_ptr) == 'e' || tolower(*str_ptr) == 'i' || tolower(*str_ptr) == 'o' || tolower(*str_ptr) == 'u' || tolower(*str_ptr) == 'y') {
+            // if yes
+            return true;
+        }
+        // if not increment the loop and run it again
+        ++str_ptr;
+    }// end while
+    
+    // if there were no vowels
+    return false;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
