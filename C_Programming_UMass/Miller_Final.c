@@ -345,6 +345,61 @@ bool is_word_legal (char *str_ptr)
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
+// *******************************************************************
+//6)  Write a function that will determine if a given string is a palindrome.  DO NOT use the C library function: strrev
+//
+//A palindrome is a word or sentence that reads the same forward as it does backward.
+//
+//Examples of word palindromes would be civic or rotor ... a word or phase would be:
+//
+//Never odd or even
+//
+//A good web site of examples is:  http://www.rinkworks.com/words/palindromes.shtml
+// *******************************************************************
+
+// *******************************************************************
+// FUNCTION:    is_palindrome
+//
+// DESCRIPTION: This function will take a string and determine if it
+//              is a palindrome or not.
+//
+// PARAMETERS:  string - a word
+//
+// OUTPUTS:     bool - true or false
+//
+// CALLS:       none
+// *******************************************************************
+bool is_palindrome(char string[])
+{
+    int begin; // first position of the array
+    int end; // last position of the array
+    int middle; // middle of the array
+    int length = 0; // length of the array
+    
+    // determine the length of the array
+    while (string[length] != '\0' ){
+        length++;
+    }
+    
+    // assign the middle and end positions of the array
+    end = length - 1;
+    middle = length/2;
+    
+    // check the first value against the last value
+    for( begin = 0 ; begin < middle ; begin++, end--)
+    {
+        if (string[begin] != string[end])
+        {
+            // if they don't match
+            return false;
+        }
+    }
+    // if they all match
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
