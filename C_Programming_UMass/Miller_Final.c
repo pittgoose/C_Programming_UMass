@@ -451,8 +451,6 @@ struct stats string_data (char *str_ptr)
             string_stats.digits++;
         }
         // if the character is none of the above
-        
-        // TODO figure this part out
         else {
             string_stats.non_alphanumeric++;
         }
