@@ -462,6 +462,55 @@ struct stats string_data (char *str_ptr)
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
+// *******************************************************************
+//8)  Write a function, myBaseBallStats, that is passed the following integer stats on a baseball player:
+//
+//Number of Singles, Doubles, Triples, and Home Runs as well as Number of At Bats.
+//
+//Based on this information, return a structure that contains the following
+//
+//Total Bases, Batting Average, Home Run Ratio, and Slugging Average.
+//
+//You do not need to be a baseball fan to do this ... All the information you need in
+//terms of the formulas and explanations can be found at:
+//
+//http://www.baseball-almanac.com/stats.shtml
+//
+//Note:  Number of hits is:  singles + doubles + triples + home runs
+// *******************************************************************
+
+struct baseball_stats{
+    int total_bases;
+    float batting_average;
+    float home_run_ratio;
+    float slugging_average;
+};
+
+struct baseball_stats myBaseBallStats (int singles, int doubles, int triples, int homers, int at_bats)
+{
+    struct baseball_stats my_stats;
+    int hits;
+    
+    // determine number of hits
+    hits = singles + doubles + triples + homers;
+    
+    // Determine how many total bases (
+    my_stats.total_bases = singles + (doubles * 2) + (triples * 3) + (homers * 4);
+    
+    // determine batting average
+    my_stats.batting_average = (float) hits / at_bats;
+    
+    // determine home run ratio
+    my_stats.home_run_ratio = (float) homers / at_bats;
+    
+    // determine slugging average
+    my_stats.slugging_average = (float) my_stats.total_bases / at_bats;
+    
+    return my_stats;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
