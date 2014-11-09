@@ -63,16 +63,48 @@
 //};
 // *******************************************************************
 
+struct date
+{
+    int month;
+    int day;
+    int year;
+};
 
+struct name {
+    char first_name[20];
+    char last_name[40];
+};
+
+struct actor {
+    struct name actor_name;
+    struct date birth_date;
+};
+
+struct character {
+    struct name actor_name;
+    struct name character_name;
+};
+
+struct movie {
+    char title[100];
+    struct character top_25_cast[25];
+    struct date release_date;
+    struct date to_dvd_date;
+    struct name producer_name;
+    struct name director_name;
+    char synopsis[1000];
+    int rating;
+    char primary_genre[10];
+    char secondary_genre[10];
+    
+    struct movie *next;
+};
 
 
 
 int main (void)
 {
-    struct baseball_stats myBaseBallStats (int singles, int doubles, int triples, int homers, int at_bats);
-    struct baseball_stats my_stats = myBaseBallStats(50, 20, 3, 14, 100);
-    printf("total bases = %i\nbatting average = %1.3f\nhome run ratio = %1.3f\nslugging average = %1.3f\n\n", my_stats.total_bases, my_stats.batting_average, my_stats.home_run_ratio, my_stats.slugging_average);
-    
+    struct movie my_movie;
     return 0;
 }
 
